@@ -18,6 +18,7 @@ export function App() {
   ajax({
     url: api.POSTS,
     cbSuccess: (posts) => {
+      console.log(posts);
       let html = "";
       posts.forEach((post) => (html += PostCard(post)));
       d.querySelector(".loader").style.display = `none`;
