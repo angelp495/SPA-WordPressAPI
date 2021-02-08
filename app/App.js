@@ -13,6 +13,7 @@ export function App() {
   $root.appendChild(Header());
   $root.appendChild(Main());
   $root.appendChild(Loader());
+
   Router();
   InfiniteScroll();
 }

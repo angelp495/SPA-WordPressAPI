@@ -3,6 +3,7 @@ import api from "../helpers/wp_api.js";
 import { PostCard } from "./PostCard.js";
 import { Post } from "./Post.js";
 import { SearchCard } from "./SearchCard.js";
+import { ContactForm } from "./ContactForm.js";
 
 export async function Router() {
   const d = document,
@@ -55,8 +56,7 @@ export async function Router() {
       },
     });
   } else if (hash === "#/contacto") {
-    $main.innerHTML = `<h2>Seccion de Contacto</h2>`;
-    //d.querySelector(".loader").style.display = `none`;
+    $main.appendChild(ContactForm());
   } else {
     //d.getElementById("posts");
     $main.innerHTML = `<h2>Aqui cargara el contenido de el Post previamente seleccionado</h2>`;
